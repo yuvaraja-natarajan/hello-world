@@ -1,0 +1,321 @@
+﻿sqlserver,RealTimeTruckerApp_ERD3,dbo,Color,ColorId,1,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Color,ColorName,2,varchar,15,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Color,Code,3,varchar,15,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Device,DeviceID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Device,FirebaseToken,2,varchar,200,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Device,Status,3,char,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Device,CreatedBy,4,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Device,CreatedAt,5,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Device,ModifiedBy,6,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Device,ModifiedAt,7,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Device,DeviceNumber,8,varchar,100,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,DeviceUser,DeviceUserID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,DeviceUser,DeviceID,2,int,NULL,FOREIGN KEY,dbo,Device,DeviceID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,DeviceUser,Status,3,char,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,DeviceUser,CreatedBy,4,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,DeviceUser,CreatedAt,5,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,DeviceUser,ModifiedBy,6,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,DeviceUser,ModifiedAt,7,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,DeviceUser,UserID,8,int,NULL,FOREIGN KEY,dbo,User,UserID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,DeviceUser,AppType,9,char,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Elevator,ElevatorID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Elevator,ElevatorName,2,varchar,100,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Elevator,ElevatorLat,3,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Elevator,ElevatorLong,4,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Elevator,ElevatorContactNo,5,varchar,20,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Elevator,ElevatorAddress1,6,varchar,255,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Elevator,ElevatorAddress2,7,varchar,255,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Elevator,ElevatorCity,8,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Elevator,ElevatorState,9,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Elevator,ElevatorZip,10,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmerField,FarmerFieldID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmerField,FarmerID,2,int,NULL,FOREIGN KEY,dbo,Farmer,FarmerID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmerField,FieldName,3,varchar,100,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmerField,WaypointsAvl,4,bit,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmerField,NearestRoadwayLat,5,decimal,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmerField,NearestRoadwayLong,6,decimal,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmerField,TruckRate,7,numeric,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmerField,FieldStatus,8,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmerField,CreatedDate,9,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmerField,CreatedBy,10,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmerField,ModifiedDate,11,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmerField,ModifiedBy,12,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmerField,AS400_ID,13,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmerField,FieldLat,14,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmerField,FieldLong,15,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmerField,IsDelayed,16,bit,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmerField,ColorCode,17,varchar,20,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmFieldNotes,FarmFieldNotesID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmFieldNotes,FarmerFieldID,2,int,NULL,FOREIGN KEY,dbo,FarmerField,FarmerFieldID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmFieldNotes,Notes,3,varchar,255,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmFieldNotes,CreatedDate,4,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmFieldNotes,CreatedBy,5,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmFieldNotes,TripNoteTypeID,6,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmFieldNotes,SubmittedUserID,7,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmFieldNotes,SubmittedUserType,8,char,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmFieldNotes,SubmittedDateTime,9,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Invoice,InvoiceId,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Invoice,InvoiceNum,2,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Invoice,TruckerId,3,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Invoice,SubmittedDateTime,4,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Invoice,CreatedBy,5,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Invoice,CreatedDate,6,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Invoice,ModifiedBy,7,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Invoice,ModifiedDate,8,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Invoice,RecordStatus,9,char,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Log,LogID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Log,LogMessageID,2,int,NULL,FOREIGN KEY,dbo,LogMessage,LogMessageID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Log,LogCreatedTime,3,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Log,CreatedDate,4,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Log,CreatedBy,5,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,LogMessage,LogMessageID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,LogMessage,LogText,2,varchar,255,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,LogMessage,CreatedDate,3,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,LogMessage,CreatedBy,4,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,CommandUser,CommandUserID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,CommandUser,UserID,2,int,NULL,FOREIGN KEY,dbo,User,UserID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,CommandUser,CreatedBy,3,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,CommandUser,CreatedDate,4,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,CommandUser,ModifiedBy,5,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,CommandUser,ModifiedDate,6,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,CommandUser,RecordStatus,7,char,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Farmer,FarmerID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Farmer,UserID,2,int,NULL,FOREIGN KEY,dbo,User,UserID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Farmer,CreatedBy,3,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Farmer,CreatedDate,4,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Farmer,ModifiedBy,5,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Farmer,ModifiedDate,6,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Farmer,RecordStatus,7,char,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Notification,NotificationID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Notification,NotificationDateTime,2,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Notification,NotificationFrom,3,char,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Notification,AssociatedTripID,4,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Notification,DeviceInfo,5,varchar,100,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Notification,NotificationType,6,varchar,10,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Notification,Message,7,varchar,600,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Notification,MessageType,8,varchar,10,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Notification,IsViewed,9,bit,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Notification,CreatedBy,10,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Notification,CreatedAt,11,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Notification,ModifiedBy,12,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Notification,ModifiedAt,13,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Notification,Status,14,char,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Notification,UserID,15,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trucker,TruckerID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trucker,UserID,2,int,NULL,FOREIGN KEY,dbo,User,UserID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trucker,TruckerStatus,3,char,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trucker,CreatedDate,4,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trucker,CreatedBy,5,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trucker,ModifiedDate,6,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trucker,ModifiedBy,7,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trucker,RecordStatus,8,char,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,User,UserID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,User,UserName,2,varchar,100,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,User,UserPassword,3,varchar,100,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,User,CreatedBy,4,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,User,CreatedDate,5,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,User,ModifiedBy,6,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,User,ModifiedDate,7,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,User,RecordStatus,8,char,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,User,UserTypeID,9,int,NULL,FOREIGN KEY,dbo,UserType,UserTypeID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trip,TripID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trip,FarmerFieldID,2,int,NULL,FOREIGN KEY,dbo,FarmerField,FarmerFieldID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trip,AssignedTruckerID,3,int,NULL,FOREIGN KEY,dbo,Trucker,TruckerID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trip,ElevatorID,4,int,NULL,FOREIGN KEY,dbo,Elevator,ElevatorID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trip,TruckRate,5,numeric,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trip,RequestedDatetime,6,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trip,ArrivedDatetime,7,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trip,DepartedDatetime,8,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trip,TripStatusID,9,int,NULL,FOREIGN KEY,dbo,TripStatus,TripStatusID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trip,CreatedDate,10,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trip,CreatedBy,11,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trip,ETA,12,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trip,Notes,13,varchar,500,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trip,IsDelayed,14,bit,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trip,ArrivedAtElevatorDatetime,15,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trip,IsStopped,16,bit,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trip,MainTripID,17,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trip,DelayAppType,18,char,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trip,RepeatUntilStop,19,bit,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trip,BOLNum,20,varchar,20,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trip,ScaleTicketNum,21,varchar,20,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trip,BOLComment,22,varchar,200,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trip,ScaleTicketComment,23,varchar,200,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trip,GrossBushels,24,decimal,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trip,InvoiceId,25,int,NULL,FOREIGN KEY,dbo,Invoice,InvoiceId
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Trip,IsFarmFieldDelayed,26,bit,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripAsset,TripAssetID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripAsset,TripID,2,int,NULL,FOREIGN KEY,dbo,Trip,TripID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripAsset,ElectronicInvoice,3,varchar,-1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripAsset,CreatedDate,4,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripAsset,CreatedBy,5,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripAsset,ImageStream,6,varbinary,-1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripAsset,BillOfLading,7,varbinary,-1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripAsset,ScaleTicket,8,varbinary,-1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripAsset,BillOfLading2,9,varbinary,-1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripAsset,ScaleTicket2,10,varbinary,-1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,UserType,UserTypeID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,UserType,TypeName,2,varchar,100,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,UserType,CreatedBy,3,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,UserType,CreatedDate,4,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,UserType,ModifiedBy,5,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,UserType,ModifiedDate,6,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,UserType,RecordStatus,7,char,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripHistory,TripHistoryID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripHistory,TripID,2,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripHistory,FarmerFieldID,3,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripHistory,AssignedTruckerID,4,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripHistory,ElevatorID,5,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripHistory,TruckRate,6,numeric,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripHistory,RequestedDatetime,7,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripHistory,ArrivedDatetime,8,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripHistory,DepartedDatetime,9,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripHistory,TripStatusID,10,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripHistory,CreatedDate,11,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripHistory,CreatedBy,12,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripHistory,ETA,13,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripHistory,Notes,14,varchar,500,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripHistory,IsDelayed,15,bit,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripHistory,ArrivedAtElevatorDatetime,16,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripHistory,IsStopped,17,bit,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripHistory,MainTripID,18,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripHistory,DelayAppType,19,char,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripHistory,RepeatUntilStop,20,bit,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripHistory,BOLNum,21,varchar,20,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripHistory,ScaleTicketNum,22,varchar,20,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripHistory,BOLComment,23,varchar,200,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripHistory,ScaleTicketComment,24,varchar,200,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripHistory,GrossBushels,25,decimal,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripHistory,InvoiceId,26,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripHistory,IsFarmFieldDelayed,27,bit,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripLog,TripLogID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripLog,TripID,2,int,NULL,FOREIGN KEY,dbo,Trip,TripID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripLog,TripLogTypeID,3,int,NULL,FOREIGN KEY,dbo,TripLogType,TripLogTypeID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripLog,Logtime,4,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripLog,CreatedDate,5,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripLog,CreatedBy,6,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripLogType,TripLogTypeID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripLogType,TripLogID,2,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripLogType,TripLogType,3,varchar,100,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripLogType,CreatedDate,4,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripLogType,CreatedBy,5,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripNotes,TripNotesID,1,int,NULL,FOREIGN KEY,dbo,TripNotes,TripNotesID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripNotes,TripNotesID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripNotes,TripID,2,int,NULL,FOREIGN KEY,dbo,Trip,TripID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripNotes,Seqno,3,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripNotes,TripNotes,4,varchar,255,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripNotes,CreatedDate,5,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripNotes,CreatedBy,6,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripNotes,TripNoteTypeID,7,int,NULL,FOREIGN KEY,dbo,TripNoteType,TripNoteTypeID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripNotes,SubmittedUserID,8,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripNotes,SubmittedUserType,9,char,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripNotes,SubmittedDateTime,10,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Role,RoleID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Role,RoleName,2,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Role,CreatedBy,3,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Role,CreatedDate,4,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Role,ModifiedBy,5,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Role,ModifiedDate,6,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Role,RecordStatus,7,char,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripNoteType,TripNoteTypeID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripNoteType,NoteType,2,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripNoteType,CreatedBy,3,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripNoteType,CreatedAt,4,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripNoteType,NoteTypeColor,5,varchar,10,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripStatus,TripStatusID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripStatus,StatusText,2,varchar,100,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripStatus,CreatedDate,3,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,TripStatus,CreatedBy,4,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,UserRole,UserRoleID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,UserRole,UserID,2,int,NULL,FOREIGN KEY,dbo,User,UserID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,UserRole,RoleID,3,int,NULL,FOREIGN KEY,dbo,Role,RoleID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,UserRole,CreatedBy,4,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,UserRole,CreatedDate,5,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,UserRole,ModifiedBy,6,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,UserRole,ModifiedDate,7,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,UserRole,RecordStatus,8,char,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Permission,PermissionID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Permission,PermissionName,2,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Permission,CreatedBy,3,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Permission,CreatedDate,4,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Permission,ModifiedBy,5,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Permission,ModifiedDate,6,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Permission,RecordStatus,7,char,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Waypoints,WaypointsID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Waypoints,FarmerFieldID,2,int,NULL,FOREIGN KEY,dbo,FarmerField,FarmerFieldID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Waypoints,Seqno,3,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Waypoints,WaypointsLat,4,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Waypoints,WaypointsLong,5,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Waypoints,CreatedDate,6,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Waypoints,CreatedBy,7,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Waypoints,ModifiedDate,8,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Waypoints,ModifiedBy,9,varchar,50,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Waypoints,RecordStatus,10,varchar,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Parties,PartiesID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Parties,PartiesName,2,varchar,100,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Parties,CreatedBy,3,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Parties,CreatedDate,4,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Parties,ModifiedBy,5,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Parties,ModifiedDate,6,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Parties,RecordStatus,7,char,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Commodity,CommodityID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Commodity,CommodityName,2,varchar,100,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Commodity,CreatedBy,3,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Commodity,CreatedDate,4,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Commodity,ModifiedBy,5,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Commodity,ModifiedDate,6,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Commodity,RecordStatus,7,char,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmFieldCommodity,FarmFieldCommodityID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmFieldCommodity,FarmFieldID,2,int,NULL,FOREIGN KEY,dbo,FarmerField,FarmerFieldID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmFieldCommodity,CommodityID,3,int,NULL,FOREIGN KEY,dbo,Commodity,CommodityID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmFieldCommodity,TruckRate,4,numeric,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmFieldCommodity,CreatedBy,5,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmFieldCommodity,CreatedDate,6,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmFieldCommodity,ModifiedBy,7,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmFieldCommodity,ModifiedDate,8,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,FarmFieldCommodity,RecordStatus,9,char,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,RoleResourcePermission,RoleResourcePermissionID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,RoleResourcePermission,RoleID,2,int,NULL,FOREIGN KEY,dbo,Role,RoleID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,RoleResourcePermission,ResourceID,3,int,NULL,FOREIGN KEY,dbo,Resource,ResourceID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,RoleResourcePermission,PermissionID,4,int,NULL,FOREIGN KEY,dbo,Permission,PermissionID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,RoleResourcePermission,CreatedBy,5,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,RoleResourcePermission,CreatedDate,6,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,RoleResourcePermission,ModifiedBy,7,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,RoleResourcePermission,ModifiedDate,8,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,RoleResourcePermission,RecordStatus,9,char,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Resource,ResourceID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Resource,ResourceName,2,varchar,100,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Resource,CreatedBy,3,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Resource,CreatedDate,4,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Resource,ModifiedBy,5,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Resource,ModifiedDate,6,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Resource,RecordStatus,7,char,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Organisation,OrganisationID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Organisation,OrganisationName,2,varchar,100,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Organisation,CreatedBy,3,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Organisation,CreatedDate,4,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Organisation,ModifiedBy,5,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Organisation,ModifiedDate,6,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,Organisation,RecordStatus,7,char,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,OrganisationResourcePermission,OrganisationResourcePermissionID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,OrganisationResourcePermission,OrganisationID,2,int,NULL,FOREIGN KEY,dbo,Organisation,OrganisationID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,OrganisationResourcePermission,ResourceID,3,int,NULL,FOREIGN KEY,dbo,Resource,ResourceID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,OrganisationResourcePermission,PermissionID,4,int,NULL,FOREIGN KEY,dbo,Permission,PermissionID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,OrganisationResourcePermission,CreatedBy,5,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,OrganisationResourcePermission,CreatedDate,6,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,OrganisationResourcePermission,ModifiedBy,7,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,OrganisationResourcePermission,ModifiedDate,8,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,OrganisationResourcePermission,RecordStatus,9,char,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,UserOrganisation,UserOrganisationID,1,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,UserOrganisation,UserID,2,int,NULL,FOREIGN KEY,dbo,User,UserID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,UserOrganisation,OrganisationID,3,int,NULL,FOREIGN KEY,dbo,Organisation,OrganisationID
+sqlserver,RealTimeTruckerApp_ERD3,dbo,UserOrganisation,CreatedBy,4,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,UserOrganisation,CreatedDate,5,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,UserOrganisation,ModifiedBy,6,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,UserOrganisation,ModifiedDate,7,datetime,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,UserOrganisation,RecordStatus,8,char,1,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,sysdiagrams,name,1,nvarchar,128,UNIQUE,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,sysdiagrams,principal_id,2,int,NULL,UNIQUE,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,sysdiagrams,diagram_id,3,int,NULL,PRIMARY KEY,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,sysdiagrams,version,4,int,NULL,NULL,NULL,NULL,NULL
+sqlserver,RealTimeTruckerApp_ERD3,dbo,sysdiagrams,definition,5,varbinary,-1,NULL,NULL,NULL,NULL
